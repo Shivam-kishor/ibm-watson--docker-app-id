@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Patwa Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: rgb(2, 2, 47);
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(145, 141, 255);
+      padding: 10px 30px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ff5c5c;
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 60px 80px;
+      flex-wrap: wrap;
+    }
+
+    .leftSection {
+      font-size: 3rem;
+      max-width: 500px;
+    }
+
+    .green {
+      color: rgb(0, 255, 30);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background: #00c3ff;
+      border: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #009ace;
+    }
+
+    main hr {
+      border: 0;
+      background: #9c97f1;
+      height: 1.2px;
+      margin: 40px 80px;
+    }
+
+    .secondSection {
+      max-width: 90vw;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .secondSection h1 {
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+
+    .text-grey {
+      color: #d1d1d1;
+    }
+
+    .experience-stairs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+      padding-left: 40px;
+    }
+
+    .experience-card {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .experience-card:nth-child(odd) {
+      transform: translateY(-20px);
+    }
+
+    .experience-card:nth-child(even) {
+      transform: translateY(20px);
+    }
+
+    .experience-card:hover {
+      transform: scale(1.03);
+      box-shadow: 4px 8px 25px rgba(0, 119, 255, 0.2);
+    }
+
+    .experience-card img {
+      height: 40px;
+      width: 40px;
+      margin-bottom: 10px;
+    }
+
+    .experience-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #0077ff;
+    }
+
+    .experience-card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    footer {
+      background-color: rgb(3, 24, 74);
+      padding: 40px;
+      color: white;
+      text-align: center;
+    }
+
+    .footer-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .footer-rights {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 6% auto;
+      padding: 40px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+      color: black;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">Shivam Patwa Portfolio</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Service</a></li>
+    <!----    <li><a href="#projects">Project</a></li> -->
+        <li><a href="https://www.blogger.com/profile/13082558592116600527" target="_blank">Blog</a></li>
+        <li><a href="#" onclick="openModal()">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <a href="https://linktr.ee/Mr_shivam_patwa">
+      <marquee behavior="scroll" direction="left">
+        <img src="Join us.gif" width="300" height="30" alt="join" />
+      </marquee>
+    </a>
+
+    <section class="firstSection" id="home">
+      <div class="leftSection">
+        Hey <span class="green">Nerds,</span> eXplore fre@king <span class="green">gEEky !</span>🖤
+      </div>
+      <div class="rightSection">
+        <img src="bg.png" alt="nerdy's" width="500" height="500">
+      </div>
+    </section>
+
+    <div class="buttons">
+      <a href="https://jumpshare.com/share/a110RzkWTxXudLhvRhew" target="_blank"><button class="btn">Download Resume</button></a>
+      <a href="https://github.com/Shivam-kishor" target="_blank"><button class="btn">Visit Github</button></a>
+    </div>
+
+    <hr />
+
+ <!-- Professional Past Experience Section -->
+    <section class="secondSection">
+      <span class="text-grey">What I have done so far</span>
+      <h1>Past Experience</h1>
+
+      <div class="experience-stairs">
+        <div class="experience-card">
+          <img src="developer.png" alt="HTML" />
+          <h3>HTML Developer</h3>
+          <p>Built responsive layouts using semantic HTML5 and modern web standards.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="Python" />
+          <h3>Python</h3>
+          <p>Automated tasks, built CLI tools, and backend APIs with Flask & Django.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="Linux" />
+          <h3>Linux~Kali [CEH]</h3>
+          <p>Ethical hacking basics, Linux terminal mastery, and network tools.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="PHP" />
+          <h3>PHP</h3>
+          <p>Created dynamic web applications and REST APIs with MySQL integration.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="Android" />
+          <h3>Android [H/W + S/W]</h3>
+          <p>Flashed ROMs, debugged apps, and configured ADB for advanced control.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="Computer" />
+          <h3>Computer [H/W + S/W]</h3>
+          <p>Diagnosed hardware faults and installed operating systems professionally.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="Java" />
+          <h3>Java</h3>
+          <p>Built object-oriented desktop apps and practiced DSA fundamentals.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="Crypto" />
+          <h3>Crypto-Currency</h3>
+          <p>Explored blockchain basics, smart contracts, and crypto wallets.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="DevOps" />
+          <h3>DevOps</h3>
+          <p>Worked with GitHub Actions, Docker, and deployment automation.</p>
+        </div>
+
+        <div class="experience-card">
+          <img src="developer.png" alt="Geek" />
+          <h3>😁 Geeking Out</h3>
+          <p>Always exploring new tech, breaking stuff, and rebuilding better.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Contact Form -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>📩 Contact <span style="color: rosybrown;">Details</span></h2>
+        <form class="contact-form" action="#" method="POST">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+
+          <label for="query">Your Query</label>
+          <textarea id="query" name="query" placeholder="Write your query here..." required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-section">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+        <ul>
+              <li><a href="https://www.blogger.com/profile/13082558592116600527" target="_blank">Blog</a></li>
+          <li><a href="#" onclick="openModal()">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-rights">
+        Copyright © shivampatwa.com | All rights reserved
+      </div>
+    </footer>
+  </main>
+
+  <script>
+
+  window.watsonAssistantChatOptions = {
+    integrationID: "3c001439-443b-4581-bffb-a0c4c299c038", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "23db9d0d-869d-4a05-97de-344ff526a275", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+
+
+
+
+    function openModal() {
+      document.getElementById("contactModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("contactModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById("contactModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+
+</html>
